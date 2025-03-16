@@ -1,0 +1,98 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(40, 40, 40, 0.8)), url('https://images.pexels.com/photos/18149377/pexels-photo-18149377/free-photo-of-photo-of-the-night-sky.jpeg?auto=compress&cs=tinysrgb&w=600') no-repeat center center fixed;
+    background-size: cover;
+    background-blend-mode: overlay;
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+    min-height: 100vh;
+    color: #fff;
+}
+
+.container {
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.6), rgba(40, 40, 40, 0.6));
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+    display: inline-block;
+    transform: translateZ(0);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    backdrop-filter: blur(10px);
+    max-width: 90%;
+    margin: 20px auto;
+}
+
+.container:hover {
+    transform: translateZ(20px) scale(1.05);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.7);
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(40, 40, 40, 0.8));
+}
+
+input {
+    padding: 12px;
+    width: 60%;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+}
+
+input:focus {
+    border-color: rgba(0, 123, 255, 0.8);
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+    outline: none;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+button {
+    padding: 12px 20px;
+    background: linear-gradient(135deg, rgba(0, 123, 255, 0.8), rgba(0, 86, 179, 0.8));
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    margin-top: 15px;
+    font-size: 16px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+    background: linear-gradient(135deg, rgba(0, 86, 179, 0.9), rgba(0, 51, 102, 0.9));
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+#weatherInfo {
+    margin-top: 25px;
+    font-size: 20px;
+    color: #fff;
+    animation: fadeIn 1.5s ease-in-out;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.6), rgba(40, 40, 40, 0.6));
+    padding: 15px;
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 600px) {
+    input {
+        width: 80%;
+    }
+
+    .container {
+        padding: 20px;
+    }
+}
